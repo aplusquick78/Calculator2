@@ -1,4 +1,4 @@
-# Prabhat's Calculator TechnoHacks
+# Prabhat's Calculator - TechnoHacks
 TECHNOHACKS-CALCULATOR
 Prabhat Sharma
 Hello connections,
@@ -8,7 +8,8 @@ I'm excited to share #task3 of my internship with The TECHNOHACKS EDUTECH in Web
 
 Task:CALCULATOR
 IDE: VSCODE
-# Technologies Used:
+
+Technologies Used:
 - HTML
 - CSS
 - JAVASCRIPT
@@ -16,8 +17,8 @@ IDE: VSCODE
 # GitHub Repository Link:https://github.com/prabhatrsharma/TechnoHacks-Calculator.git 
 # Hosted Website Link: https://sudeshdr.github.io/TechnoHacks-Sudesh-Calculator/
 
-# To know MORE about TECHNOHACKS EDUTECH Website: http://technohacks.co.in/
-# VISIT Technohacks Edutech: 
+To know MORE about TECHNOHACKS EDUTECH Website: http://technohacks.co.in/
+VISIT Technohacks Edutech: 
 <a href="https://www.linkedin.com/company/technohacks-edutech/"> Linkedin</a>||
 <a href="https://twitter.com/technohacksedu"> Twitter</a>||
 <a href="https://telegram.me/TechnoHacksofficial"> Telegram</a>||
