@@ -1,12 +1,17 @@
 # Prabhat's Calculator - TechnoHacks
+
 TECHNOHACKS-CALCULATOR
+
 Prabhat Sharma
+
 Hello connections,
+
 I'm excited to share #task3 of my internship with The TECHNOHACKS EDUTECH in Web development under the Technohacks - 'Lets Grow Together' Program.
 
 #BATCH8
 
 Task:CALCULATOR
+
 IDE: VSCODE
 
 Technologies Used:
