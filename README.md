@@ -2,7 +2,7 @@
 
 TECHNOHACKS-CALCULATOR
 
-Prabhat Sharma
+# Prabhat Sharma
 
 Hello connections,
 
@@ -31,12 +31,13 @@ VISIT Technohacks Edutech:
 <a href="https://www.youtube.com/channel/UCwuh25VS9J9ApJ7Yomw_Lqw"> Youtube</a>||<br>
 
 Thanking,
+
 TechnoHacks:
 Mr. Sandip Gavit
 
 Please review and comment with your worthy suggestions.
 
 Thank You!
-- Prabhat Sharma
+# Prabhat Sharma
 
 ![Screenshot (54)](https://github.com/prabhatrsharma/TechnoHacks-Calculator/assets/118990267/96437e4e-204d-4861-a64c-e3ab248de281)
