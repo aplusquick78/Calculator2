@@ -15,7 +15,7 @@ Technologies Used:
 - JAVASCRIPT
 
 # GitHub Repository Link:https://github.com/prabhatrsharma/TechnoHacks-Calculator.git 
-# Hosted Website Link: https://sudeshdr.github.io/TechnoHacks-Sudesh-Calculator/
+# Hosted Website Link: https://prabhatrsharma.github.io/TechnoHacks-Calculator/
 
 To know MORE about TECHNOHACKS EDUTECH Website: http://technohacks.co.in/
 VISIT Technohacks Edutech: 
