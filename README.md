@@ -19,8 +19,9 @@ Technologies Used:
 - CSS
 - JAVASCRIPT
 
-# GitHub Repository Link:https://github.com/prabhatrsharma/TechnoHacks-Calculator.git 
-# Hosted Website Link: https://prabhatrsharma.github.io/TechnoHacks-Calculator/
+GitHub Repository Link:https://github.com/prabhatrsharma/TechnoHacks-Calculator.git 
+
+Hosted Website Link: https://prabhatrsharma.github.io/TechnoHacks-Calculator/
 
 To know MORE about TECHNOHACKS EDUTECH Website: http://technohacks.co.in/
 VISIT Technohacks Edutech: 
