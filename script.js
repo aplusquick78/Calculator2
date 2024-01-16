@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   equal.addEventListener("click", () => {
     equal_pressed = true;
     try {
-      let result = eval(input.value);
+      let result = evaluateExpression(input.value);
       input.value = formatNumber(result);
     } catch (err) {
       input.value = "Error";
@@ -42,5 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Format number with thousands separator
   function formatNumber(number) {
     return Number(number).toLocaleString();
+  }
+
+  // Function to evaluate arithmetic expressions
+  function evaluateExpression(expression) {
+    // Replace 'x' with '*' for multiplication
+    expression = expression.replace(/x/g, "*");
+
+    // Use Function constructor to avoid eval
+    let func = new Function('return ' + expression);
+    return func();
   }
 });
