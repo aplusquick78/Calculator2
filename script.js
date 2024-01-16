@@ -1,47 +1,46 @@
-let equal_pressed = 0;
-let button_input = document.querySelectorAll(".input-button");
-let input = document.getElementById("input");
-let equal = document.getElementById("equal");
-let clear = document.getElementById("clear");
-let erase = document.getElementById("erase");
+document.addEventListener("DOMContentLoaded", function () {
+  let equal_pressed = false;
+  let button_input = document.querySelectorAll(".input-button");
+  let input = document.getElementById("input");
+  let equal = document.getElementById("equal");
+  let clear = document.getElementById("clear");
+  let erase = document.getElementById("erase");
 
-window.onload = () => {
-  input.value = "";
-};
+  // Event listener for each button click
+  button_input.forEach((button_class) => {
+    button_class.addEventListener("click", () => {
+      if (equal_pressed) {
+        input.value = "";
+        equal_pressed = false;
+      }
 
-button_input.forEach((button_class) => {
-  button_class.addEventListener("click", () => {
-    if (equal_pressed == 1) {
-      input.value = "";
-      equal_pressed = 0;
-    }
-
-    input.value += button_class.value;
-    input.value = formatNumber(input.value);
+      input.value += button_class.value;
+    });
   });
-});
 
-equal.addEventListener("click", () => {
-  equal_pressed = 1;
-  let inp_val = input.value;
-  try {
-    let solution = new Function('return ' + inp_val)();
-    input.value = formatNumber(solution);
-  } catch (err) {
-    alert("Invalid Input");
+  // Event listener for equal button click
+  equal.addEventListener("click", () => {
+    equal_pressed = true;
+    try {
+      let result = eval(input.value);
+      input.value = formatNumber(result);
+    } catch (err) {
+      input.value = "Error";
+    }
+  });
+
+  // Event listener for clear button click
+  clear.addEventListener("click", () => {
+    input.value = "";
+  });
+
+  // Event listener for erase button click
+  erase.addEventListener("click", () => {
+    input.value = input.value.slice(0, -1);
+  });
+
+  // Format number with thousands separator
+  function formatNumber(number) {
+    return Number(number).toLocaleString();
   }
 });
-
-clear.addEventListener("click", () => {
-  input.value = "";
-});
-
-erase.addEventListener("click", () => {
-  input.value = input.value.substr(0, input.value.length - 1);
-  input.value = formatNumber(input.value);
-});
-
-// Format number with thousands separator
-function formatNumber(number) {
-  return Number(number).toLocaleString();
-}
