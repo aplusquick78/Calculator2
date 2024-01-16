@@ -29,12 +29,15 @@ equal.addEventListener("click", () => {
     // 계산을 안전하게 하기 위해 Function 생성자를 사용
     let solution = new Function('return ' + inp_val)();
     
+    console.log("Solution:", solution); // 중간 결과 확인
+    
     // 숫자를 1000 단위에 쉼표로 표시
     input.value = formatNumber(solution);
   } catch (err) {
     alert("Invalid Input");
   }
 });
+
 
 clear.addEventListener("click", () => {
   input.value = "";
