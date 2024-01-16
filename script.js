@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       input.value += button_class.value;
+      input.value = formatNumber(input.value);
     });
   });
 
@@ -37,11 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for erase button click
   erase.addEventListener("click", () => {
     input.value = input.value.slice(0, -1);
+    input.value = formatNumber(input.value);
   });
 
   // Format number with thousands separator
   function formatNumber(number) {
-    return Number(number).toLocaleString();
+    return Number(number.replace(/,/g, "")).toLocaleString();
   }
 
   // Function to evaluate arithmetic expressions
