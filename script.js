@@ -26,12 +26,11 @@ equal.addEventListener("click", () => {
   equal_pressed = 1;
   let inp_val = input.value;
   try {
-    let solution = eval(inp_val);
-    if (Number.isInteger(solution)) {
-      input.value = formatNumber(solution);
-    } else {
-      input.value = formatNumber(solution.toFixed(2));
-    }
+    // 계산을 안전하게 하기 위해 Function 생성자를 사용
+    let solution = new Function('return ' + inp_val)();
+    
+    // 숫자를 1000 단위에 쉼표로 표시
+    input.value = formatNumber(solution);
   } catch (err) {
     alert("Invalid Input");
   }
@@ -51,3 +50,4 @@ erase.addEventListener("click", () => {
 function formatNumber(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
