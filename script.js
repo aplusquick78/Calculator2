@@ -17,7 +17,6 @@ button_input.forEach((button_class) => {
     }
 
     input.value += button_class.value;
-    // 추가: 숫자를 1000 단위에 쉼표로 표시
     input.value = formatNumber(input.value);
   });
 });
@@ -26,18 +25,12 @@ equal.addEventListener("click", () => {
   equal_pressed = 1;
   let inp_val = input.value;
   try {
-    // 계산을 안전하게 하기 위해 Function 생성자를 사용
     let solution = new Function('return ' + inp_val)();
-    
-    console.log("Solution:", solution); // 중간 결과 확인
-    
-    // 숫자를 1000 단위에 쉼표로 표시
     input.value = formatNumber(solution);
   } catch (err) {
     alert("Invalid Input");
   }
 });
-
 
 clear.addEventListener("click", () => {
   input.value = "";
@@ -45,12 +38,10 @@ clear.addEventListener("click", () => {
 
 erase.addEventListener("click", () => {
   input.value = input.value.substr(0, input.value.length - 1);
-  // 추가: 숫자를 1000 단위에 쉼표로 표시
   input.value = formatNumber(input.value);
 });
 
-// 추가: 숫자를 1000 단위에 쉼표로 표시하는 함수
+// Format number with thousands separator
 function formatNumber(number) {
-  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return Number(number).toLocaleString();
 }
-
