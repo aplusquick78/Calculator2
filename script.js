@@ -43,13 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Format number with thousands separator
   function formatNumber(number) {
-    return Number(number.replace(/,/g, "")).toLocaleString();
+    return number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   // Function to evaluate arithmetic expressions
   function evaluateExpression(expression) {
     // Replace 'x' with '*' for multiplication
     expression = expression.replace(/x/g, "*");
+
+    // Remove commas before evaluating
+    expression = expression.replace(/,/g, "");
 
     // Use Function constructor to avoid eval
     let func = new Function('return ' + expression);
